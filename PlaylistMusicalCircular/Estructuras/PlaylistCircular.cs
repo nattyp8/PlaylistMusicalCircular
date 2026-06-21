@@ -8,8 +8,8 @@ namespace PlaylistMusicalCircular.Estructuras
 {
     public class PlaylistCircular
     {
-        private NodoCancion cabeza { get; set; }
-        private NodoCancion actual { get; set; }
+        private NodoCancion? cabeza { get; set; }
+        private NodoCancion? actual { get; set; }
         private int cantidad { get; set; }
         
         //constructor
@@ -90,7 +90,7 @@ namespace PlaylistMusicalCircular.Estructuras
         }
 
         //METODO PARA BUSCAR CANCIONES
-        public Cancion BuscarCancion(string titulo)
+        public Cancion? BuscarCancion(string titulo)
         {
 
             if (cabeza == null)
@@ -136,6 +136,65 @@ namespace PlaylistMusicalCircular.Estructuras
             
         }
 
+        // METODO PARA ELIMINAR CANCION
+        //eliminar por nombre 
+        public bool EliminarCancion(string titulo)
+        {
+            if (cabeza == null)
+            {
+                return false;
+            }
+
+            //recorrer la lista
+            NodoCancion aux = cabeza;
+
+            do
+            {
+                //caso de que se encuentre la cancion
+                if (aux.Datos.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase))
+                {
+                    if (aux.Siguiente == aux)
+                    {
+                        cabeza = null;
+                        actual = null;
+                    }
+
+                }
+
+                //caso de que hay varias cancciones
+                else
+                {
+
+                    // si la cancion que se quiere eliminar es la cabeza, la NUEVA cabeza va a ser la siguiente
+                    if (aux == cabeza)
+                    {
+                        cabeza = cabeza.Siguiente;
+                    }
+
+                    // si la cancion eliminada era la actual, seavanza a la siguiente cancion
+                    if (aux == actual)
+                    {
+                        actual = actual.Siguiente;
+                    }
+
+                    //reconectar nodos vecinos
+                    aux.Anterior.Siguiente = aux.Siguiente;
+                    aux.Siguiente.Anterior = aux.Anterior;
+                }
+
+                cantidad--;
+
+                //para saber que se elimino bien
+                return true;
+
+
+                aux = aux.Siguiente;
+            } while (aux != cabeza);
+
+                return false;
+        }
+
     }
+
 }
 

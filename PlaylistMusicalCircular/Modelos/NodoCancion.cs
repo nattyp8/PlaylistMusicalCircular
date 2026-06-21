@@ -7,8 +7,8 @@ namespace PlaylistMusicalCircular.Modelos
     public class NodoCancion
     {
         public Cancion Datos { get; set; }
-        public  NodoCancion Siguiente { set; get; }
-        public NodoCancion Anterior { get; set; }
+        public  NodoCancion? Siguiente { set; get; }
+        public NodoCancion? Anterior { get; set; }
 
         //constructores
 
