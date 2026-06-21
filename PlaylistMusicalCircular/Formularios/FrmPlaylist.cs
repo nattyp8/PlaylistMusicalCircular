@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlaylistMusicalCircular.Estructuras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,21 @@ namespace PlaylistMusicalCircular.Formularios
         public FrmPlaylist()
         {
             InitializeComponent();
+
+            CargarPlaylist();
         }
+
+        private void CargarPlaylist()
+        {
+            //mostrar todas las canciones en el datagridview
+            dgvPlaylist.DataSource = null;
+            dgvPlaylist.DataSource = GestorPlaylist.Playlist.ObtenerTodas();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarPlaylist();
+        }
+
     }
 }

@@ -28,12 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmPlaylist";
+            dgvPlaylist = new DataGridView();
+            lblBuscaar = new Label();
+            txtBuscar = new TextBox();
+            bntBuscar = new Button();
+            btnActualizar = new Button();
+            btnEliminar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvPlaylist).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvPlaylist
+            // 
+            dgvPlaylist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPlaylist.Location = new Point(199, 39);
+            dgvPlaylist.Name = "dgvPlaylist";
+            dgvPlaylist.Size = new Size(381, 223);
+            dgvPlaylist.TabIndex = 0;
+            // 
+            // lblBuscaar
+            // 
+            lblBuscaar.AutoSize = true;
+            lblBuscaar.Location = new Point(199, 287);
+            lblBuscaar.Name = "lblBuscaar";
+            lblBuscaar.Size = new Size(0, 19);
+            lblBuscaar.TabIndex = 1;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(387, 287);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(100, 26);
+            txtBuscar.TabIndex = 2;
+
+            // 
+            // bntBuscar
+            // 
+            bntBuscar.Location = new Point(249, 288);
+            bntBuscar.Name = "bntBuscar";
+            bntBuscar.Size = new Size(75, 23);
+            bntBuscar.TabIndex = 3;
+            bntBuscar.Text = "Buscar";
+            bntBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            btnActualizar.Location = new Point(249, 368);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(86, 23);
+            btnActualizar.TabIndex = 4;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(400, 368);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // FrmPlaylist
+            // 
+            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnActualizar);
+            Controls.Add(bntBuscar);
+            Controls.Add(txtBuscar);
+            Controls.Add(lblBuscaar);
+            Controls.Add(dgvPlaylist);
+            Name = "FrmPlaylist";
+            Text = "FrmPlaylist";
+            ((System.ComponentModel.ISupportInitialize)dgvPlaylist).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dgvPlaylist;
+        private Label lblBuscaar;
+        private TextBox txtBuscar;
+        private Button bntBuscar;
+        private Button btnActualizar;
+        private Button btnEliminar;
     }
 }

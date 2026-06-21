@@ -44,7 +44,6 @@
             label1.Size = new Size(90, 19);
             label1.TabIndex = 0;
             label1.Text = "MY PLAYLIST";
-            label1.Click += label1_Click;
             // 
             // btnAgregarCancion
             // 
@@ -54,6 +53,7 @@
             btnAgregarCancion.TabIndex = 1;
             btnAgregarCancion.Text = "Agregar cancion";
             btnAgregarCancion.UseVisualStyleBackColor = true;
+            btnAgregarCancion.Click += btnAgregarCancion_Click;
             // 
             // btnVerPlaylist
             // 
@@ -63,6 +63,7 @@
             btnVerPlaylist.TabIndex = 2;
             btnVerPlaylist.Text = "Ver Playlist";
             btnVerPlaylist.UseVisualStyleBackColor = true;
+            btnVerPlaylist.Click += btnVerPlaylist_Click;
             // 
             // btnReproductor
             // 
@@ -72,6 +73,7 @@
             btnReproductor.TabIndex = 3;
             btnReproductor.Text = "Reproductor";
             btnReproductor.UseVisualStyleBackColor = true;
+            btnReproductor.Click += btnReproductor_Click;
             // 
             // btnSalir
             // 
@@ -81,6 +83,7 @@
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // button5
             // 
