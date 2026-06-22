@@ -48,7 +48,7 @@ namespace PlaylistMusicalCircular.Formularios
                 pbPortada.Image = null;
             }
         }
-        
+
         private void ReproducirCancionActual()
         {
             Cancion? actual = GestorPlaylist.Playlist.ObtenerCancionActual();
@@ -58,6 +58,7 @@ namespace PlaylistMusicalCircular.Formularios
                 reproductor.controls.stop();
                 reproductor.URL = actual.RutaArchivo;
                 reproductor.controls.play();
+                timerProgreso.Start();
                 btnReproducir.Text = "⏸";
                 reproduciendo = true;
             }
@@ -96,7 +97,7 @@ namespace PlaylistMusicalCircular.Formularios
         private void btnReproducir_Click(object sender, EventArgs e)
         {
             Cancion? actual = GestorPlaylist.Playlist.ObtenerCancionActual();
-             
+
             if (actual != null)
             {
                 if (!reproduciendo)
@@ -106,11 +107,56 @@ namespace PlaylistMusicalCircular.Formularios
                 else
                 {
                     reproductor.controls.pause();
-                    btnReproducir.Text= "▶";
+                    btnReproducir.Text = "▶";
 
                     reproduciendo = false;
+
+                    timerProgreso.Stop();
                 }
             }
+        }
+
+        private void trackBarProgreso_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerProgreso_Tick(object sender, EventArgs e)
+        {
+            //verificar que exista cancion cargada 
+            if (reproductor.currentMedia != null)
+            {
+                //duracion actual
+                double posicionActual = reproductor.controls.currentPosition;
+
+                //duraciona total de la cancion
+                double duracionTotal = reproductor.currentMedia.duration;
+
+                if (duracionTotal > 0)
+                {
+                    //calcular porcentaje reproducido
+                    trackBarProgreso.Value = (int)(posicionActual * 100 / duracionTotal);
+
+                    //actualiza el tiempo mostrado 
+                    lblTiempo.Text = TimeSpan.FromSeconds(posicionActual).ToString(@"mm\:ss") + "/" +
+                        TimeSpan.FromSeconds(duracionTotal).ToString(@"mm\:ss");
+
+                    // Si la canción está por terminar
+                    if (duracionTotal - posicionActual < 1)
+                    {
+                        GestorPlaylist.Playlist.Siguiente();
+
+                        MostrarCancionActual();
+
+                        ReproducirCancionActual();
+                    }
+                }
+            }
+        }
+
+        private void FrmReproductor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reproductor.controls.stop();
         }
     }
 }

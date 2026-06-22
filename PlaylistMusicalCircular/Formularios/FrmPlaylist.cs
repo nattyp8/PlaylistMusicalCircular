@@ -28,13 +28,24 @@ namespace PlaylistMusicalCircular.Formularios
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            CargarPlaylist();
+            if (dgvPlaylist.CurrentRow != null)
+            {
+                Cancion cancionSeleccionada =
+                    (Cancion)dgvPlaylist.CurrentRow.DataBoundItem;
+
+                FrmEditarCancion frm =
+                    new FrmEditarCancion(cancionSeleccionada);
+
+                frm.ShowDialog();
+
+                CargarPlaylist();
+            }
         }
 
         private void bntBuscar_Click(object sender, EventArgs e)
         {
             Cancion? encontrada = GestorPlaylist.Playlist.BuscarCancion(txtBuscar.Text);
-                if (encontrada != null)
+            if (encontrada != null)
             {
                 MessageBox.Show
                     (
@@ -69,6 +80,11 @@ namespace PlaylistMusicalCircular.Formularios
                     MessageBox.Show("No se ha podido eliminar");
                 }
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

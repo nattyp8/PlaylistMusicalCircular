@@ -84,5 +84,18 @@ namespace PlaylistMusicalCircular.Formularios
             rutaImagen = "";
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show(
+                "Quiere cancelar la edicion?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

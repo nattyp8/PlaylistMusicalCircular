@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblTituloCancion = new Label();
             lbl = new Label();
             btnAnterior = new Button();
@@ -35,13 +36,17 @@
             btnSiguiente = new Button();
             lblArtista = new Label();
             pbPortada = new PictureBox();
+            trackBarProgreso = new TrackBar();
+            lblTiempo = new Label();
+            timerProgreso = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pbPortada).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBarProgreso).BeginInit();
             SuspendLayout();
             // 
             // lblTituloCancion
             // 
             lblTituloCancion.AutoSize = true;
-            lblTituloCancion.Location = new Point(226, 202);
+            lblTituloCancion.Location = new Point(220, 180);
             lblTituloCancion.Name = "lblTituloCancion";
             lblTituloCancion.Size = new Size(150, 19);
             lblTituloCancion.TabIndex = 0;
@@ -57,7 +62,7 @@
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(86, 319);
+            btnAnterior.Location = new Point(82, 398);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(76, 37);
             btnAnterior.TabIndex = 3;
@@ -67,7 +72,7 @@
             // 
             // btnReproducir
             // 
-            btnReproducir.Location = new Point(255, 319);
+            btnReproducir.Location = new Point(255, 398);
             btnReproducir.Name = "btnReproducir";
             btnReproducir.Size = new Size(79, 37);
             btnReproducir.TabIndex = 4;
@@ -77,7 +82,7 @@
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(422, 319);
+            btnSiguiente.Location = new Point(414, 398);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(75, 37);
             btnSiguiente.TabIndex = 5;
@@ -88,7 +93,7 @@
             // lblArtista
             // 
             lblArtista.AutoSize = true;
-            lblArtista.Location = new Point(237, 244);
+            lblArtista.Location = new Point(239, 223);
             lblArtista.Name = "lblArtista";
             lblArtista.Size = new Size(117, 19);
             lblArtista.TabIndex = 1;
@@ -96,18 +101,44 @@
             // 
             // pbPortada
             // 
-            pbPortada.Location = new Point(209, 41);
+            pbPortada.Location = new Point(204, 21);
             pbPortada.Name = "pbPortada";
             pbPortada.Size = new Size(188, 137);
             pbPortada.SizeMode = PictureBoxSizeMode.Zoom;
             pbPortada.TabIndex = 6;
             pbPortada.TabStop = false;
             // 
+            // trackBarProgreso
+            // 
+            trackBarProgreso.Location = new Point(204, 268);
+            trackBarProgreso.Maximum = 100;
+            trackBarProgreso.Name = "trackBarProgreso";
+            trackBarProgreso.Size = new Size(188, 45);
+            trackBarProgreso.TabIndex = 7;
+            trackBarProgreso.TickStyle = TickStyle.None;
+            trackBarProgreso.Scroll += trackBarProgreso_Scroll;
+            // 
+            // lblTiempo
+            // 
+            lblTiempo.AutoSize = true;
+            lblTiempo.Location = new Point(255, 331);
+            lblTiempo.Name = "lblTiempo";
+            lblTiempo.Size = new Size(92, 19);
+            lblTiempo.TabIndex = 8;
+            lblTiempo.Text = "00:00 / 00:00";
+            // 
+            // timerProgreso
+            // 
+            timerProgreso.Interval = 500;
+            timerProgreso.Tick += timerProgreso_Tick;
+            // 
             // FrmReproductor
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(599, 383);
+            ClientSize = new Size(599, 463);
+            Controls.Add(lblTiempo);
+            Controls.Add(trackBarProgreso);
             Controls.Add(pbPortada);
             Controls.Add(btnSiguiente);
             Controls.Add(btnReproducir);
@@ -117,7 +148,9 @@
             Controls.Add(lblTituloCancion);
             Name = "FrmReproductor";
             Text = "FrmReproductor";
+            FormClosing += FrmReproductor_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pbPortada).EndInit();
+            ((System.ComponentModel.ISupportInitialize)trackBarProgreso).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,5 +165,8 @@
         private Button btnSiguiente;
         private Label lblArtista;
         private PictureBox pbPortada;
+        private TrackBar trackBarProgreso;
+        private Label lblTiempo;
+        private System.Windows.Forms.Timer timerProgreso;
     }
 }

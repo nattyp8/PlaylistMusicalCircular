@@ -55,16 +55,17 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(387, 287);
+            txtBuscar.Location = new Point(376, 287);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(100, 26);
+            txtBuscar.Size = new Size(144, 26);
             txtBuscar.TabIndex = 2;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // bntBuscar
             // 
             bntBuscar.Location = new Point(249, 288);
             bntBuscar.Name = "bntBuscar";
-            bntBuscar.Size = new Size(75, 23);
+            bntBuscar.Size = new Size(75, 25);
             bntBuscar.TabIndex = 3;
             bntBuscar.Text = "Buscar";
             bntBuscar.UseVisualStyleBackColor = true;
@@ -72,18 +73,19 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(249, 368);
+            btnActualizar.Location = new Point(199, 368);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(86, 23);
+            btnActualizar.Size = new Size(86, 34);
             btnActualizar.TabIndex = 4;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(400, 368);
+            btnEliminar.Location = new Point(505, 368);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.Size = new Size(75, 34);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;

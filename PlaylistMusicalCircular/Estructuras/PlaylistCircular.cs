@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using PlaylistMusicalCircular.Modelos;
-using System.Collections.Generic;
 
 namespace PlaylistMusicalCircular.Estructuras
 {
@@ -157,41 +156,37 @@ namespace PlaylistMusicalCircular.Estructuras
                     {
                         cabeza = null;
                         actual = null;
-                    }
-
-                }
-
-                //caso de que hay varias cancciones
-                else
-                {
-
-                    // si la cancion que se quiere eliminar es la cabeza, la NUEVA cabeza va a ser la siguiente
-                    if (aux == cabeza)
+                    } //caso de que hay varias cancciones
+                    else
                     {
-                        cabeza = cabeza.Siguiente;
+
+                        // si la cancion que se quiere eliminar es la cabeza, la NUEVA cabeza va a ser la siguiente
+                        if (aux == cabeza)
+                        {
+                            cabeza = cabeza.Siguiente;
+                        }
+
+                        // si la cancion eliminada era la actual, seavanza a la siguiente cancion
+                        if (aux == actual)
+                        {
+                            actual = actual.Siguiente;
+                        }
+
+                        //reconectar nodos vecinos
+                        aux.Anterior.Siguiente = aux.Siguiente;
+                        aux.Siguiente.Anterior = aux.Anterior;
                     }
 
-                    // si la cancion eliminada era la actual, seavanza a la siguiente cancion
-                    if (aux == actual)
-                    {
-                        actual = actual.Siguiente;
-                    }
-
-                    //reconectar nodos vecinos
-                    aux.Anterior.Siguiente = aux.Siguiente;
-                    aux.Siguiente.Anterior = aux.Anterior;
+                    cantidad--;
+                
+                    //para saber que se elimino bien
+                    return true;
                 }
-
-                cantidad--;
-
-                //para saber que se elimino bien
-                return true;
-
-
                 aux = aux.Siguiente;
+
             } while (aux != cabeza);
 
-                return false;
+              return false;
         }
 
     }
