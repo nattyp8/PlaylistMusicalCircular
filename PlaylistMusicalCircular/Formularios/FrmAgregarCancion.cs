@@ -63,7 +63,6 @@ namespace PlaylistMusicalCircular.Formularios
                     txtTitulo.Text,
                     txtArtista.Text,
                     txtAlbum.Text,
-                    txtGenero.Text,
                     rutaArchivo,
                     rutaImagen
                 );
@@ -88,7 +87,7 @@ namespace PlaylistMusicalCircular.Formularios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show(
-                "Quiere cancelar la edicion?",
+                "Desea terminar de agregar canciones?",
                 "Confirmar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);

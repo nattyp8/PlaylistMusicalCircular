@@ -33,7 +33,6 @@ namespace PlaylistMusicalCircular.Formularios
             txtTitulo.Text = cancionEditar.Titulo;
             txtArtista.Text = cancionEditar.Artista;
             txtAlbum.Text = cancionEditar.Album;
-            txtGenero.Text = cancionEditar.Genero;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -41,7 +40,6 @@ namespace PlaylistMusicalCircular.Formularios
             cancionEditar.Titulo = txtTitulo.Text;
             cancionEditar.Album = txtAlbum.Text;
             cancionEditar.Artista = txtArtista.Text;
-            cancionEditar.Genero = txtGenero.Text;
 
             cancionEditar.RutaImagen = rutaImagen;
             cancionEditar.RutaArchivo = rutaArchivo;
