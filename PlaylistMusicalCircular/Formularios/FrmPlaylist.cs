@@ -24,6 +24,10 @@ namespace PlaylistMusicalCircular.Formularios
             //mostrar todas las canciones en el datagridview
             dgvPlaylist.DataSource = null;
             dgvPlaylist.DataSource = GestorPlaylist.Playlist.ObtenerTodas();
+            dgvPlaylist.Columns["Duracion"].Visible = false;
+            dgvPlaylist.Columns["RutaArchivo"].Visible = false;
+            dgvPlaylist.Columns["RutaImagen"].Visible = false;
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -83,6 +87,11 @@ namespace PlaylistMusicalCircular.Formularios
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPlaylist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

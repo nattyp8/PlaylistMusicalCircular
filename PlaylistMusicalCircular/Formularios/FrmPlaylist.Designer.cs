@@ -44,6 +44,7 @@
             dgvPlaylist.Name = "dgvPlaylist";
             dgvPlaylist.Size = new Size(381, 223);
             dgvPlaylist.TabIndex = 0;
+            dgvPlaylist.CellContentClick += dgvPlaylist_CellContentClick;
             // 
             // lblBuscaar
             // 

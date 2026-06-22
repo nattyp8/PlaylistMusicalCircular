@@ -77,7 +77,6 @@ namespace PlaylistMusicalCircular.Formularios
             txtTitulo.Clear();
             txtArtista.Clear();
             txtAlbum.Clear();
-            txtGenero.Clear();
 
             rutaArchivo = "";
             rutaImagen = "";

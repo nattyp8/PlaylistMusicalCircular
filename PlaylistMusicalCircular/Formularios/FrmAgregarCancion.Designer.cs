@@ -32,11 +32,9 @@
             lblTitulo = new Label();
             lblArtisita = new Label();
             lblAlbum = new Label();
-            lblGuardar = new Label();
             txtTitulo = new TextBox();
             txtArtista = new TextBox();
             txtAlbum = new TextBox();
-            txtGenero = new TextBox();
             btnSeleccionarMP3 = new Button();
             btnSeleccionarImagen = new Button();
             bntGuardar = new Button();
@@ -55,7 +53,7 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(231, 98);
+            lblTitulo.Location = new Point(280, 147);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(43, 19);
             lblTitulo.TabIndex = 1;
@@ -64,7 +62,7 @@
             // lblArtisita
             // 
             lblArtisita.AutoSize = true;
-            lblArtisita.Location = new Point(231, 140);
+            lblArtisita.Location = new Point(280, 189);
             lblArtisita.Name = "lblArtisita";
             lblArtisita.Size = new Size(52, 19);
             lblArtisita.TabIndex = 2;
@@ -73,48 +71,32 @@
             // lblAlbum
             // 
             lblAlbum.AutoSize = true;
-            lblAlbum.Location = new Point(231, 178);
+            lblAlbum.Location = new Point(280, 227);
             lblAlbum.Name = "lblAlbum";
             lblAlbum.Size = new Size(49, 19);
             lblAlbum.TabIndex = 3;
             lblAlbum.Text = "Album";
             // 
-            // lblGuardar
-            // 
-            lblGuardar.AutoSize = true;
-            lblGuardar.Location = new Point(231, 224);
-            lblGuardar.Name = "lblGuardar";
-            lblGuardar.Size = new Size(54, 19);
-            lblGuardar.TabIndex = 4;
-            lblGuardar.Text = "Genero";
-            // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(364, 91);
+            txtTitulo.Location = new Point(413, 140);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(100, 26);
             txtTitulo.TabIndex = 6;
             // 
             // txtArtista
             // 
-            txtArtista.Location = new Point(364, 133);
+            txtArtista.Location = new Point(413, 182);
             txtArtista.Name = "txtArtista";
             txtArtista.Size = new Size(100, 26);
             txtArtista.TabIndex = 7;
             // 
             // txtAlbum
             // 
-            txtAlbum.Location = new Point(364, 175);
+            txtAlbum.Location = new Point(413, 224);
             txtAlbum.Name = "txtAlbum";
             txtAlbum.Size = new Size(100, 26);
             txtAlbum.TabIndex = 8;
-            // 
-            // txtGenero
-            // 
-            txtGenero.Location = new Point(364, 217);
-            txtGenero.Name = "txtGenero";
-            txtGenero.Size = new Size(100, 26);
-            txtGenero.TabIndex = 9;
             // 
             // btnSeleccionarMP3
             // 
@@ -165,11 +147,9 @@
             Controls.Add(bntGuardar);
             Controls.Add(btnSeleccionarImagen);
             Controls.Add(btnSeleccionarMP3);
-            Controls.Add(txtGenero);
             Controls.Add(txtAlbum);
             Controls.Add(txtArtista);
             Controls.Add(txtTitulo);
-            Controls.Add(lblGuardar);
             Controls.Add(lblAlbum);
             Controls.Add(lblArtisita);
             Controls.Add(lblTitulo);
@@ -186,11 +166,9 @@
         private Label lblTitulo;
         private Label lblArtisita;
         private Label lblAlbum;
-        private Label lblGuardar;
         private TextBox txtTitulo;
         private TextBox txtArtista;
         private TextBox txtAlbum;
-        private TextBox txtGenero;
         private Button btnSeleccionarMP3;
         private Button btnSeleccionarImagen;
         private Button bntGuardar;
