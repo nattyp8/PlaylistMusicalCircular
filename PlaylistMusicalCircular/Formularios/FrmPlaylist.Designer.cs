@@ -59,7 +59,6 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(100, 26);
             txtBuscar.TabIndex = 2;
-
             // 
             // bntBuscar
             // 
@@ -69,6 +68,7 @@
             bntBuscar.TabIndex = 3;
             bntBuscar.Text = "Buscar";
             bntBuscar.UseVisualStyleBackColor = true;
+            bntBuscar.Click += bntBuscar_Click;
             // 
             // btnActualizar
             // 
@@ -87,6 +87,7 @@
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // FrmPlaylist
             // 
