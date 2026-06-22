@@ -33,12 +33,10 @@
             lblArtisita = new Label();
             lblAlbum = new Label();
             lblGuardar = new Label();
-            lblDuracion = new Label();
             txtTitulo = new TextBox();
             txtArtista = new TextBox();
             txtAlbum = new TextBox();
             txtGenero = new TextBox();
-            txtDuracion = new TextBox();
             btnSeleccionarMP3 = new Button();
             btnSeleccionarImagen = new Button();
             bntGuardar = new Button();
@@ -90,15 +88,6 @@
             lblGuardar.TabIndex = 4;
             lblGuardar.Text = "Genero";
             // 
-            // lblDuracion
-            // 
-            lblDuracion.AutoSize = true;
-            lblDuracion.Location = new Point(231, 267);
-            lblDuracion.Name = "lblDuracion";
-            lblDuracion.Size = new Size(64, 19);
-            lblDuracion.TabIndex = 5;
-            lblDuracion.Text = "Duracion";
-            // 
             // txtTitulo
             // 
             txtTitulo.Location = new Point(364, 91);
@@ -126,13 +115,6 @@
             txtGenero.Name = "txtGenero";
             txtGenero.Size = new Size(100, 26);
             txtGenero.TabIndex = 9;
-            // 
-            // txtDuracion
-            // 
-            txtDuracion.Location = new Point(364, 260);
-            txtDuracion.Name = "txtDuracion";
-            txtDuracion.Size = new Size(100, 26);
-            txtDuracion.TabIndex = 10;
             // 
             // btnSeleccionarMP3
             // 
@@ -182,12 +164,10 @@
             Controls.Add(bntGuardar);
             Controls.Add(btnSeleccionarImagen);
             Controls.Add(btnSeleccionarMP3);
-            Controls.Add(txtDuracion);
             Controls.Add(txtGenero);
             Controls.Add(txtAlbum);
             Controls.Add(txtArtista);
             Controls.Add(txtTitulo);
-            Controls.Add(lblDuracion);
             Controls.Add(lblGuardar);
             Controls.Add(lblAlbum);
             Controls.Add(lblArtisita);
@@ -206,12 +186,10 @@
         private Label lblArtisita;
         private Label lblAlbum;
         private Label lblGuardar;
-        private Label lblDuracion;
         private TextBox txtTitulo;
         private TextBox txtArtista;
         private TextBox txtAlbum;
         private TextBox txtGenero;
-        private TextBox txtDuracion;
         private Button btnSeleccionarMP3;
         private Button btnSeleccionarImagen;
         private Button bntGuardar;

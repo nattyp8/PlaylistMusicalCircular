@@ -64,7 +64,6 @@ namespace PlaylistMusicalCircular.Formularios
                     txtArtista.Text,
                     txtAlbum.Text,
                     txtGenero.Text,
-                    TimeSpan.Parse(txtDuracion.Text),
                     rutaArchivo,
                     rutaImagen
                 );
@@ -80,7 +79,6 @@ namespace PlaylistMusicalCircular.Formularios
             txtArtista.Clear();
             txtAlbum.Clear();
             txtGenero.Clear();
-            txtDuracion.Clear();
 
             rutaArchivo = "";
             rutaImagen = "";

@@ -73,6 +73,7 @@
             btnReproducir.TabIndex = 4;
             btnReproducir.Text = "▶";
             btnReproducir.UseVisualStyleBackColor = true;
+            btnReproducir.Click += btnReproducir_Click;
             // 
             // btnSiguiente
             // 
