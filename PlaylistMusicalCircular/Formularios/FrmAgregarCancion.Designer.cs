@@ -44,105 +44,123 @@
             // lbltitulobienvenida
             // 
             lbltitulobienvenida.AutoSize = true;
-            lbltitulobienvenida.Location = new Point(298, 58);
+            lbltitulobienvenida.Font = new Font("Cascadia Mono SemiBold", 15F, FontStyle.Bold | FontStyle.Italic);
+            lbltitulobienvenida.ForeColor = Color.DarkMagenta;
+            lbltitulobienvenida.Location = new Point(179, 42);
             lbltitulobienvenida.Name = "lbltitulobienvenida";
-            lbltitulobienvenida.Size = new Size(196, 19);
+            lbltitulobienvenida.Size = new Size(396, 27);
             lbltitulobienvenida.TabIndex = 0;
-            lbltitulobienvenida.Text = "Agregar canciones a la playlist!";
+            lbltitulobienvenida.Text = "Agregue canciones a la playlist!";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(280, 147);
+            lblTitulo.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.DimGray;
+            lblTitulo.Location = new Point(191, 121);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(43, 19);
+            lblTitulo.Size = new Size(56, 20);
             lblTitulo.TabIndex = 1;
-            lblTitulo.Text = "Titulo";
+            lblTitulo.Text = "Titulo :";
             // 
             // lblArtisita
             // 
             lblArtisita.AutoSize = true;
-            lblArtisita.Location = new Point(280, 189);
+            lblArtisita.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblArtisita.ForeColor = Color.DimGray;
+            lblArtisita.Location = new Point(191, 186);
             lblArtisita.Name = "lblArtisita";
-            lblArtisita.Size = new Size(52, 19);
+            lblArtisita.Size = new Size(65, 20);
             lblArtisita.TabIndex = 2;
-            lblArtisita.Text = "Artisita";
+            lblArtisita.Text = "Artista : ";
             // 
             // lblAlbum
             // 
             lblAlbum.AutoSize = true;
-            lblAlbum.Location = new Point(280, 227);
+            lblAlbum.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAlbum.ForeColor = Color.DimGray;
+            lblAlbum.Location = new Point(191, 245);
             lblAlbum.Name = "lblAlbum";
-            lblAlbum.Size = new Size(49, 19);
+            lblAlbum.Size = new Size(62, 20);
             lblAlbum.TabIndex = 3;
-            lblAlbum.Text = "Album";
+            lblAlbum.Text = "Album :";
             // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(413, 140);
+            txtTitulo.BackColor = SystemColors.Window;
+            txtTitulo.Location = new Point(277, 114);
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(100, 26);
+            txtTitulo.Size = new Size(165, 26);
             txtTitulo.TabIndex = 6;
             // 
             // txtArtista
             // 
-            txtArtista.Location = new Point(413, 182);
+            txtArtista.Location = new Point(277, 186);
             txtArtista.Name = "txtArtista";
-            txtArtista.Size = new Size(100, 26);
+            txtArtista.Size = new Size(165, 26);
             txtArtista.TabIndex = 7;
             // 
             // txtAlbum
             // 
-            txtAlbum.Location = new Point(413, 224);
+            txtAlbum.Location = new Point(277, 242);
             txtAlbum.Name = "txtAlbum";
-            txtAlbum.Size = new Size(100, 26);
+            txtAlbum.Size = new Size(165, 26);
             txtAlbum.TabIndex = 8;
             // 
             // btnSeleccionarMP3
             // 
-            btnSeleccionarMP3.Location = new Point(76, 353);
+            btnSeleccionarMP3.BackColor = Color.Thistle;
+            btnSeleccionarMP3.Font = new Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold | FontStyle.Italic);
+            btnSeleccionarMP3.Location = new Point(179, 351);
             btnSeleccionarMP3.Name = "btnSeleccionarMP3";
-            btnSeleccionarMP3.Size = new Size(135, 32);
+            btnSeleccionarMP3.Size = new Size(204, 39);
             btnSeleccionarMP3.TabIndex = 11;
             btnSeleccionarMP3.Text = "Seleccionar MP3";
-            btnSeleccionarMP3.UseVisualStyleBackColor = true;
+            btnSeleccionarMP3.UseVisualStyleBackColor = false;
             btnSeleccionarMP3.Click += btnSeleccionarMP3_Click;
             // 
             // btnSeleccionarImagen
             // 
-            btnSeleccionarImagen.Location = new Point(245, 352);
+            btnSeleccionarImagen.BackColor = Color.Thistle;
+            btnSeleccionarImagen.Font = new Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold | FontStyle.Italic);
+            btnSeleccionarImagen.Location = new Point(179, 304);
             btnSeleccionarImagen.Name = "btnSeleccionarImagen";
-            btnSeleccionarImagen.Size = new Size(163, 32);
+            btnSeleccionarImagen.Size = new Size(204, 41);
             btnSeleccionarImagen.TabIndex = 12;
             btnSeleccionarImagen.Text = "Seleccionar Imagen";
-            btnSeleccionarImagen.UseVisualStyleBackColor = true;
+            btnSeleccionarImagen.UseVisualStyleBackColor = false;
             btnSeleccionarImagen.Click += btnSeleccionarImagen_Click;
             // 
             // bntGuardar
             // 
-            bntGuardar.Location = new Point(460, 351);
+            bntGuardar.BackColor = Color.Thistle;
+            bntGuardar.Font = new Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold | FontStyle.Italic);
+            bntGuardar.Location = new Point(179, 430);
             bntGuardar.Name = "bntGuardar";
-            bntGuardar.Size = new Size(103, 32);
+            bntGuardar.Size = new Size(110, 47);
             bntGuardar.TabIndex = 13;
             bntGuardar.Text = "Guardar ";
-            bntGuardar.UseVisualStyleBackColor = true;
+            bntGuardar.UseVisualStyleBackColor = false;
             bntGuardar.Click += bntGuardar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(626, 351);
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold | FontStyle.Italic);
+            btnCancelar.Location = new Point(417, 430);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(90, 32);
+            btnCancelar.Size = new Size(95, 47);
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // FrmAgregarCancion
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.LavenderBlush;
+            ClientSize = new Size(715, 504);
             Controls.Add(btnCancelar);
             Controls.Add(bntGuardar);
             Controls.Add(btnSeleccionarImagen);
@@ -155,7 +173,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(lbltitulobienvenida);
             Name = "FrmAgregarCancion";
-            Text = "FrmAgregarCancion";
+            Text = "Agregar Cancion a la playlist";
             ResumeLayout(false);
             PerformLayout();
         }

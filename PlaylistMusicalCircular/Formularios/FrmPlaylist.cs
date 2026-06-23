@@ -12,9 +12,65 @@ namespace PlaylistMusicalCircular.Formularios
 {
     public partial class FrmPlaylist : Form
     {
+        private void AplicarTema()
+        {
+            Color rosa = ColorTranslator.FromHtml("#EFCEDB");
+            Color marron = ColorTranslator.FromHtml("#4F2B1F");
+
+            // Formulario
+            this.BackColor = rosa;
+
+            // Botones
+            btnActualizar.BackColor = marron;
+            btnActualizar.ForeColor = rosa;
+            btnActualizar.FlatStyle = FlatStyle.Flat;
+
+            btnEliminar.BackColor = marron;
+            btnEliminar.ForeColor = rosa;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+
+            bntBuscar.BackColor = marron;
+            bntBuscar.ForeColor = rosa;
+            bntBuscar.FlatStyle = FlatStyle.Flat;
+
+            /*btnActualizar.FlatAppearance.BorderSize = 0;
+            btnEliminar.FlatAppearance.BorderSize = 0;
+            bntBuscar.FlatAppearance.BorderSize = 0;
+*/
+            // TextBox
+            txtBuscar.BackColor = Color.White;
+            txtBuscar.ForeColor = marron;
+
+            // DataGridView
+            dgvPlaylist.BackgroundColor = rosa;
+            dgvPlaylist.BorderStyle = BorderStyle.None;
+
+            dgvPlaylist.EnableHeadersVisualStyles = false;
+
+            dgvPlaylist.ColumnHeadersDefaultCellStyle.BackColor = marron;
+            dgvPlaylist.ColumnHeadersDefaultCellStyle.ForeColor = rosa;
+            dgvPlaylist.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10, FontStyle.Bold);
+
+            dgvPlaylist.DefaultCellStyle.BackColor = Color.White;
+            dgvPlaylist.DefaultCellStyle.ForeColor = marron;
+
+            dgvPlaylist.AlternatingRowsDefaultCellStyle.BackColor =
+                ColorTranslator.FromHtml("#F7E4EC");
+
+            dgvPlaylist.GridColor = marron;
+
+            dgvPlaylist.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            dgvPlaylist.DefaultCellStyle.SelectionBackColor = marron;
+            dgvPlaylist.DefaultCellStyle.SelectionForeColor = rosa;
+        }
         public FrmPlaylist()
         {
             InitializeComponent();
+
+            AplicarTema();
 
             CargarPlaylist();
         }
@@ -27,6 +83,7 @@ namespace PlaylistMusicalCircular.Formularios
             dgvPlaylist.Columns["Duracion"].Visible = false;
             dgvPlaylist.Columns["RutaArchivo"].Visible = false;
             dgvPlaylist.Columns["RutaImagen"].Visible = false;
+            dgvPlaylist.RowHeadersVisible = false;
 
         }
 
@@ -86,14 +143,5 @@ namespace PlaylistMusicalCircular.Formularios
             }
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvPlaylist_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

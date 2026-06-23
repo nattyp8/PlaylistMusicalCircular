@@ -14,11 +14,62 @@ namespace PlaylistMusicalCircular.Formularios
     {
         //guardar las rutas del mp3 seleccionado y de la portada (antes del constructor
         //pq tiene que ser visible para todos los metodos del formulario)
+
+        private void AplicarTema()
+        {
+            Color rosa = ColorTranslator.FromHtml("#EFCEDB");
+            Color marron = ColorTranslator.FromHtml("#4F2B1F");
+
+            // Formulario
+            this.BackColor = rosa;
+
+            // Labels
+            lblTitulo.ForeColor = marron;
+            lblArtisita.ForeColor = marron;
+            lblAlbum.ForeColor = marron;
+            lbltitulobienvenida.ForeColor = marron;
+
+            // TextBox
+            txtTitulo.BackColor = Color.White;
+            txtTitulo.ForeColor = marron;
+
+            txtArtista.BackColor = Color.White;
+            txtArtista.ForeColor = marron;
+
+            txtAlbum.BackColor = Color.White;
+            txtAlbum.ForeColor = marron;
+
+            // Botón seleccionar MP3
+            btnSeleccionarMP3.BackColor = marron;
+            btnSeleccionarMP3.ForeColor = rosa;
+            btnSeleccionarMP3.FlatStyle = FlatStyle.Flat;
+            btnSeleccionarMP3.FlatAppearance.BorderSize = 0;
+
+            // Botón seleccionar imagen
+            btnSeleccionarImagen.BackColor = marron;
+            btnSeleccionarImagen.ForeColor = rosa;
+            btnSeleccionarImagen.FlatStyle = FlatStyle.Flat;
+            btnSeleccionarImagen.FlatAppearance.BorderSize = 0;
+
+            // Botón guardar
+            bntGuardar.BackColor = marron;
+            bntGuardar.ForeColor = rosa;
+            bntGuardar.FlatStyle = FlatStyle.Flat;
+            bntGuardar.FlatAppearance.BorderSize = 0;
+
+            // Botón cancelar
+            btnCancelar.BackColor = marron;
+            btnCancelar.ForeColor = rosa;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.FlatAppearance.BorderSize = 0;
+        }
+
         private string rutaArchivo = "";
         private string rutaImagen = "";
         public FrmAgregarCancion()
         {
             InitializeComponent();
+            AplicarTema();
         }
 
         private void btnSeleccionarMP3_Click(object sender, EventArgs e)
@@ -44,7 +95,7 @@ namespace PlaylistMusicalCircular.Formularios
         private void btnSeleccionarImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog abrirImagen = new OpenFileDialog();
-            abrirImagen.Filter = "Imagenes (*.jpg; *.png) | *.jpg; .*png";
+            abrirImagen.Filter = "Imagenes (*.jpg; *.png) | *.jpg; *.png";
             abrirImagen.Title = "Seleccionar imagen de portada";
 
             if (abrirImagen.ShowDialog() == DialogResult.OK)
@@ -95,5 +146,7 @@ namespace PlaylistMusicalCircular.Formularios
                 this.Close();
             }
         }
+
+       
     }
 }

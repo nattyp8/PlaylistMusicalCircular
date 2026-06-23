@@ -15,9 +15,48 @@ namespace PlaylistMusicalCircular.Formularios
     {
         private WindowsMediaPlayer reproductor = new WindowsMediaPlayer();
         private bool reproduciendo = false;
+
+        private void AplicarTema()
+        {
+            // Fondo principal
+            this.BackColor = ColorTranslator.FromHtml("#4F2B1F");
+
+            // Titulo canción
+            lblTituloCancion.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
+            lblTituloCancion.Font = new Font("Segoe UI", 18, FontStyle.Bold);
+
+            // Artista
+            lblArtista.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
+            lblArtista.Font = new Font("Segoe UI", 11);
+
+            // Tiempo
+            lblTiempo.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
+
+            // Botón reproducir
+            btnReproducir.BackColor = ColorTranslator.FromHtml("#EFCEDB");
+            btnReproducir.ForeColor = ColorTranslator.FromHtml("#4F2B1F");
+            btnReproducir.FlatStyle = FlatStyle.Flat;
+
+            // Botón siguiente
+            btnSiguiente.BackColor = ColorTranslator.FromHtml("#EFCEDB");
+            btnSiguiente.ForeColor = ColorTranslator.FromHtml("#4F2B1F");
+            btnSiguiente.FlatStyle = FlatStyle.Flat;
+
+            // Botón anterior
+            btnAnterior.BackColor = ColorTranslator.FromHtml("#EFCEDB");
+            btnAnterior.ForeColor = ColorTranslator.FromHtml("#4F2B1F");
+            btnAnterior.FlatStyle = FlatStyle.Flat;
+
+            // Barra de progreso
+            trackBarProgreso.BackColor = ColorTranslator.FromHtml("#4F2B1F");
+
+            // Portada
+            pbPortada.BorderStyle = BorderStyle.FixedSingle;
+        }
         public FrmReproductor()
         {
             InitializeComponent();
+            AplicarTema();
             MostrarCancionActual();
         }
 
@@ -157,6 +196,11 @@ namespace PlaylistMusicalCircular.Formularios
         private void FrmReproductor_FormClosing(object sender, FormClosingEventArgs e)
         {
             reproductor.controls.stop();
+        }
+
+        private void pbPortada_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

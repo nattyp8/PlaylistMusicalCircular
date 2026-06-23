@@ -40,11 +40,10 @@
             // dgvPlaylist
             // 
             dgvPlaylist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPlaylist.Location = new Point(199, 39);
+            dgvPlaylist.Location = new Point(199, 92);
             dgvPlaylist.Name = "dgvPlaylist";
             dgvPlaylist.Size = new Size(381, 223);
             dgvPlaylist.TabIndex = 0;
-            dgvPlaylist.CellContentClick += dgvPlaylist_CellContentClick;
             // 
             // lblBuscaar
             // 
@@ -56,17 +55,17 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(376, 287);
+            txtBuscar.Location = new Point(199, 35);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(144, 26);
+            txtBuscar.Size = new Size(232, 26);
             txtBuscar.TabIndex = 2;
-            txtBuscar.TextChanged += txtBuscar_TextChanged;
+            txtBuscar.Text = "escriba la cancion a buscar";
             // 
             // bntBuscar
             // 
-            bntBuscar.Location = new Point(249, 288);
+            bntBuscar.Location = new Point(463, 36);
             bntBuscar.Name = "bntBuscar";
-            bntBuscar.Size = new Size(75, 25);
+            bntBuscar.Size = new Size(117, 25);
             bntBuscar.TabIndex = 3;
             bntBuscar.Text = "Buscar";
             bntBuscar.UseVisualStyleBackColor = true;
@@ -74,7 +73,7 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(199, 368);
+            btnActualizar.Location = new Point(199, 352);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(86, 34);
             btnActualizar.TabIndex = 4;
@@ -84,7 +83,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(505, 368);
+            btnEliminar.Location = new Point(505, 352);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(75, 34);
             btnEliminar.TabIndex = 5;

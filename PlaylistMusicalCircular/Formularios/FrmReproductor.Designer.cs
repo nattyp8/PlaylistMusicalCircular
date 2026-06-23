@@ -46,23 +46,25 @@
             // lblTituloCancion
             // 
             lblTituloCancion.AutoSize = true;
-            lblTituloCancion.Location = new Point(220, 180);
+            lblTituloCancion.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold | FontStyle.Italic);
+            lblTituloCancion.ForeColor = Color.LimeGreen;
+            lblTituloCancion.Location = new Point(206, 294);
             lblTituloCancion.Name = "lblTituloCancion";
-            lblTituloCancion.Size = new Size(150, 19);
+            lblTituloCancion.Size = new Size(208, 21);
             lblTituloCancion.TabIndex = 0;
             lblTituloCancion.Text = "no hay cancion todavia";
             // 
             // lbl
             // 
             lbl.AutoSize = true;
-            lbl.Location = new Point(255, 171);
+            lbl.Location = new Point(271, 180);
             lbl.Name = "lbl";
             lbl.Size = new Size(0, 19);
             lbl.TabIndex = 2;
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(82, 398);
+            btnAnterior.Location = new Point(83, 475);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(76, 37);
             btnAnterior.TabIndex = 3;
@@ -72,7 +74,7 @@
             // 
             // btnReproducir
             // 
-            btnReproducir.Location = new Point(255, 398);
+            btnReproducir.Location = new Point(256, 475);
             btnReproducir.Name = "btnReproducir";
             btnReproducir.Size = new Size(79, 37);
             btnReproducir.TabIndex = 4;
@@ -82,7 +84,7 @@
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(414, 398);
+            btnSiguiente.Location = new Point(415, 475);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(75, 37);
             btnSiguiente.TabIndex = 5;
@@ -93,24 +95,26 @@
             // lblArtista
             // 
             lblArtista.AutoSize = true;
-            lblArtista.Location = new Point(239, 223);
+            lblArtista.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
+            lblArtista.Location = new Point(229, 332);
             lblArtista.Name = "lblArtista";
-            lblArtista.Size = new Size(117, 19);
+            lblArtista.Size = new Size(152, 18);
             lblArtista.TabIndex = 1;
             lblArtista.Text = "tdv no hay artista";
             // 
             // pbPortada
             // 
-            pbPortada.Location = new Point(204, 21);
+            pbPortada.Location = new Point(191, 28);
             pbPortada.Name = "pbPortada";
-            pbPortada.Size = new Size(188, 137);
+            pbPortada.Size = new Size(250, 250);
             pbPortada.SizeMode = PictureBoxSizeMode.Zoom;
             pbPortada.TabIndex = 6;
             pbPortada.TabStop = false;
+            pbPortada.Click += pbPortada_Click;
             // 
             // trackBarProgreso
             // 
-            trackBarProgreso.Location = new Point(204, 268);
+            trackBarProgreso.Location = new Point(206, 383);
             trackBarProgreso.Maximum = 100;
             trackBarProgreso.Name = "trackBarProgreso";
             trackBarProgreso.Size = new Size(188, 45);
@@ -121,9 +125,10 @@
             // lblTiempo
             // 
             lblTiempo.AutoSize = true;
-            lblTiempo.Location = new Point(255, 331);
+            lblTiempo.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTiempo.Location = new Point(250, 422);
             lblTiempo.Name = "lblTiempo";
-            lblTiempo.Size = new Size(92, 19);
+            lblTiempo.Size = new Size(95, 20);
             lblTiempo.TabIndex = 8;
             lblTiempo.Text = "00:00 / 00:00";
             // 
@@ -136,7 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(599, 463);
+            ClientSize = new Size(669, 561);
             Controls.Add(lblTiempo);
             Controls.Add(trackBarProgreso);
             Controls.Add(pbPortada);
@@ -147,7 +152,7 @@
             Controls.Add(lblArtista);
             Controls.Add(lblTituloCancion);
             Name = "FrmReproductor";
-            Text = "FrmReproductor";
+            Text = "Reproductor";
             FormClosing += FrmReproductor_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pbPortada).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBarProgreso).EndInit();

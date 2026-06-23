@@ -12,6 +12,60 @@ namespace PlaylistMusicalCircular.Formularios
 {
     public partial class FrmEditarCancion : Form
     {
+
+        private void AplicarTema()
+        {
+            Color rosa = ColorTranslator.FromHtml("#EFCEDB");
+            Color marron = ColorTranslator.FromHtml("#4F2B1F");
+
+            // Fondo
+            this.BackColor = rosa;
+
+            lblbienvenida.ForeColor = marron;
+            lblAlbum.ForeColor = marron;
+            lblArtisita.ForeColor = marron;
+            lblTitulo.ForeColor = marron;
+
+
+            // Labels
+            txtTitulo.ForeColor = marron;
+            txtArtista.ForeColor = marron;
+            txtAlbum.ForeColor = marron;
+
+            // TextBox
+            txtTitulo.BackColor = Color.White;
+            txtTitulo.ForeColor = marron;
+
+            txtArtista.BackColor = Color.White;
+            txtArtista.ForeColor = marron;
+
+            txtAlbum.BackColor = Color.White;
+            txtAlbum.ForeColor = marron;
+
+            // Botón Guardar
+            btnGuardar.BackColor = marron;
+            btnGuardar.ForeColor = rosa;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.FlatAppearance.BorderSize = 0;
+
+            // Botón Cancelar
+            btnCancelar.BackColor = marron;
+            btnCancelar.ForeColor = rosa;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.FlatAppearance.BorderSize = 0;
+
+            // Botón MP3
+            btnSeleccionarMP3.BackColor = marron;
+            btnSeleccionarMP3.ForeColor = rosa;
+            btnSeleccionarMP3.FlatStyle = FlatStyle.Flat;
+            btnSeleccionarMP3.FlatAppearance.BorderSize = 0;
+
+            // Botón Imagen
+            btnSeleccionarImagen.BackColor = marron;
+            btnSeleccionarImagen.ForeColor = rosa;
+            btnSeleccionarImagen.FlatStyle = FlatStyle.Flat;
+            btnSeleccionarImagen.FlatAppearance.BorderSize = 0;
+        }
         private Cancion cancionEditar;
 
         private string rutaArchivo;
@@ -20,6 +74,8 @@ namespace PlaylistMusicalCircular.Formularios
         public FrmEditarCancion(Cancion cancion)
         {
             InitializeComponent();
+
+            AplicarTema();
 
             cancionEditar = cancion;
 
@@ -85,6 +141,11 @@ namespace PlaylistMusicalCircular.Formularios
             {
                 this.Close();
             }
+        }
+
+        private void txtAlbum_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
