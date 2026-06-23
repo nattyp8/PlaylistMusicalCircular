@@ -48,6 +48,7 @@ namespace PlaylistMusicalCircular.Formularios
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.FlatAppearance.BorderSize = 0;
 
+
             // Botón Cancelar
             btnCancelar.BackColor = marron;
             btnCancelar.ForeColor = rosa;

@@ -46,13 +46,14 @@
             // lblTituloCancion
             // 
             lblTituloCancion.AutoSize = true;
-            lblTituloCancion.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold | FontStyle.Italic);
+            lblTituloCancion.Font = new Font("Cascadia Mono SemiBold", 15F, FontStyle.Bold | FontStyle.Italic);
             lblTituloCancion.ForeColor = Color.LimeGreen;
-            lblTituloCancion.Location = new Point(206, 294);
+            lblTituloCancion.Location = new Point(178, 293);
             lblTituloCancion.Name = "lblTituloCancion";
-            lblTituloCancion.Size = new Size(208, 21);
+            lblTituloCancion.Size = new Size(276, 27);
             lblTituloCancion.TabIndex = 0;
             lblTituloCancion.Text = "no hay cancion todavia";
+            lblTituloCancion.TextAlign = ContentAlignment.TopCenter;
             // 
             // lbl
             // 
@@ -96,11 +97,12 @@
             // 
             lblArtista.AutoSize = true;
             lblArtista.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
-            lblArtista.Location = new Point(229, 332);
+            lblArtista.Location = new Point(233, 338);
             lblArtista.Name = "lblArtista";
             lblArtista.Size = new Size(152, 18);
             lblArtista.TabIndex = 1;
             lblArtista.Text = "tdv no hay artista";
+            lblArtista.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPortada
             // 

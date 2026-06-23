@@ -33,6 +33,10 @@ namespace PlaylistMusicalCircular.Formularios
             bntBuscar.ForeColor = rosa;
             bntBuscar.FlatStyle = FlatStyle.Flat;
 
+            btnSalir.BackColor = marron;
+            btnSalir.ForeColor = rosa;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+
             /*btnActualizar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatAppearance.BorderSize = 0;
             bntBuscar.FlatAppearance.BorderSize = 0;
@@ -143,5 +147,10 @@ namespace PlaylistMusicalCircular.Formularios
             }
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

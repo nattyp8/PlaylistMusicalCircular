@@ -34,6 +34,7 @@
             bntBuscar = new Button();
             btnActualizar = new Button();
             btnEliminar = new Button();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPlaylist).BeginInit();
             SuspendLayout();
             // 
@@ -55,14 +56,16 @@
             // 
             // txtBuscar
             // 
+            txtBuscar.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
             txtBuscar.Location = new Point(199, 35);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(232, 26);
+            txtBuscar.Size = new Size(232, 23);
             txtBuscar.TabIndex = 2;
             txtBuscar.Text = "escriba la cancion a buscar";
             // 
             // bntBuscar
             // 
+            bntBuscar.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
             bntBuscar.Location = new Point(463, 36);
             bntBuscar.Name = "bntBuscar";
             bntBuscar.Size = new Size(117, 25);
@@ -73,9 +76,10 @@
             // 
             // btnActualizar
             // 
+            btnActualizar.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
             btnActualizar.Location = new Point(199, 352);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(86, 34);
+            btnActualizar.Size = new Size(103, 34);
             btnActualizar.TabIndex = 4;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
@@ -83,19 +87,32 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(505, 352);
+            btnEliminar.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
+            btnEliminar.Location = new Point(356, 352);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(75, 34);
+            btnEliminar.Size = new Size(88, 34);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Font = new Font("Cascadia Mono SemiBold", 10F, FontStyle.Bold | FontStyle.Italic);
+            btnSalir.Location = new Point(496, 352);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 34);
+            btnSalir.TabIndex = 6;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // FrmPlaylist
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(btnActualizar);
             Controls.Add(bntBuscar);
@@ -117,5 +134,6 @@
         private Button bntBuscar;
         private Button btnActualizar;
         private Button btnEliminar;
+        private Button btnSalir;
     }
 }

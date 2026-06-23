@@ -23,11 +23,11 @@ namespace PlaylistMusicalCircular.Formularios
 
             // Titulo canción
             lblTituloCancion.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
-            lblTituloCancion.Font = new Font("Segoe UI", 18, FontStyle.Bold);
+           // lblTituloCancion.Font = new Font("Segoe UI", 18, FontStyle.Bold);
 
             // Artista
             lblArtista.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
-            lblArtista.Font = new Font("Segoe UI", 11);
+           // lblArtista.Font = new Font("Segoe UI", 11);
 
             // Tiempo
             lblTiempo.ForeColor = ColorTranslator.FromHtml("#EFCEDB");
